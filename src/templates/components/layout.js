@@ -9,7 +9,10 @@ module.exports = props => {
         <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
         <title>PWA</title>
       </head>
-      <body>{props.children}</body>
+      <body>
+        {props.children}
+        <script src="index.js"></script>
+      </body>
     </html>
   );
 };

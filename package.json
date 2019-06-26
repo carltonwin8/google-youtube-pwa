@@ -4,9 +4,10 @@
   "description": "The code in this repository/directory is base on [Progressive Web App Training](https://www.youtube.com/watch?v=psB_Pjwhbxo&list=PLNYkxOF6rcIB2xHBZ7opgc2Mv009X87Hh) youtube video.",
   "main": "index.js",
   "scripts": {
-    "dev": "concurrently \"npm run generate\" \"npm run serve\"",
+    "dev": "concurrently \"npm run generate\" \"npm run serve\" \"npm run build:js\"",
     "generate": "node scripts/generator.js",
-    "serve": "lite-server -c bs-config.js"
+    "serve": "http-server ./build",
+    "build:js": "webpack --watch"
   },
   "keywords": [],
   "author": "",
@@ -20,7 +21,9 @@
     "babel-register": "^6.26.0",
     "chokidar": "^3.0.1",
     "concurrently": "^4.1.1",
-    "lite-server": "^2.5.3",
-    "prettier": "^1.18.2"
+    "http-server": "^0.11.1",
+    "prettier": "^1.18.2",
+    "webpack": "^4.35.0",
+    "webpack-cli": "^3.3.5"
   }
 }
