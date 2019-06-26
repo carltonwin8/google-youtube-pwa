@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "concurrently \"npm run generate\" \"npm run serve\" \"npm run build:js\"",
     "generate": "node scripts/generator.js",
-    "serve": "http-server ./build",
+    "serve": "http-server -c-1 ./build",
     "build:js": "webpack --watch"
   },
   "keywords": [],
